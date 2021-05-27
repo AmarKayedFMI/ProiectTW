@@ -20,7 +20,6 @@ document.addEventListener('keydown', (event)=>{
 
 const nav = document.querySelector("nav");
 
-
 let scrollP = window.pageYOffset;
 
 document.addEventListener("scroll",()=>{

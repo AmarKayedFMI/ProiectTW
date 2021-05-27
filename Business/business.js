@@ -1,7 +1,14 @@
 const root = document.getElementsByClassName("root");
 const btn = document.getElementById("btn");
 const background = document.querySelector(".before-after");
-const hexValues = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+const hexValues = [0,1,2,3,4,5,6,7,8,9];
+
+hexValues.push('A');
+hexValues.push('B');
+hexValues.push('C');
+hexValues.push('D');
+hexValues.push('E');
+hexValues.push('F');
 
 
 window.onload = function(){
@@ -68,10 +75,17 @@ function printdata(data){
         const name = document.querySelector(".name");
         
         var i = 0, ok = 0;
-        for(var i = 0; i < data.people.length && ok == 0; i++)
+        for(var i = 0; i < data.people.length && ok == 0; i++){
+            var regex = new RegExp(`${data.people[i].name}`, 'i');
+            // console.log(regex);
             if(data.people[i].name == inputBox.value)
                 ok++;
-       
+            else if(regex.test(inputBox.value)){
+                alert(`I think you meant to type ${data.people[i].name}.`);
+                inputBox.value = data.people[i].name;
+                ok++;
+            }
+        }
         
         if(ok == 0){
             name.innerHTML = 'Invalid input.'
@@ -89,9 +103,6 @@ function printdata(data){
     });
     
 }
-
-
-
 
 
 

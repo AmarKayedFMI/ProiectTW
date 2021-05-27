@@ -7,7 +7,6 @@ const formTitle = document.querySelector(".form h1");
 const formBox = document.querySelector(".form-box");
 console.log(window.innerHeight);
 
-// console.log(cardsTitle.innerHTML);
 
 let scrollPosition = window.pageYOffset;
 let ok = 0;
@@ -74,30 +73,6 @@ document.addEventListener("scroll",()=>{
 
 
 
-
-
-
-
-
-// window.addEventListener('scroll', throttle(parallax, 14));
-
-// function throttle(fn, wait) {
-//   var time = Date.now();
-//   return function() {
-//     if ((time + wait - Date.now()) < 0) {
-//       fn();
-//       time = Date.now();
-//     }
-//   }
-// };
-
-// function parallax() {
-//   main.style.transform = `translateY(${scrollPosition/2}px)`;
-//   mainText.style.transform = `translateY(${scrollPosition/2.7}px)`;
-// };
-
-
-
 let i = 0;
 const images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"];
 
@@ -117,19 +92,14 @@ function changeBackgroundImage(){
 window.onload = changeBackgroundImage;
 
 
+const authors = document.querySelectorAll(".author");
+for(var j = 0; j < authors.length; j++){
+    authors[j].addEventListener("mouseover",(e)=>{
+        // console.log(e.currentTarget);
+        e.currentTarget.style.backgroundColor = "rgb(247, 154, 93)";
+    });
+    authors[j].addEventListener("mouseleave", (e)=>{
+        e.target.style.backgroundColor = "rgb(255, 132, 50)";
+    });
+}
 
-// window.addEventListener("resize",()=>{
-//     console.log(window.innerWidth);
-//     if(window.innerWidth>768 && navLinks.style.position == "absolute"){
-//         navLinks.style.position = "static";
-//     }
-
-// });
-
-
-// const navLink = document.querySelectorAll("nav li");
-
-
-// navLink.addEventListener("mouseover",()=>{
-
-// });

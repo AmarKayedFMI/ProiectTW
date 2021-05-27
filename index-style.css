@@ -51,6 +51,7 @@ main{
     background-color: rgb(255, 132, 50);
     padding:3vh 0vh;
     border-radius: 25px;
+    transition: all 0.3s ease-in;
 }
 
 .quote1, .quote3{
