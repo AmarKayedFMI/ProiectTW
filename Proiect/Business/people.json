@@ -1,0 +1,55 @@
+{
+    "people":[
+        {
+            "name": "Mark Zuckerberg" ,
+            "netWorth":  106.1,
+            "title": "CEO of Facebook"
+        },
+        {
+            "name": "Jeff Bezos",
+            "netWorth": 180.6,
+            "title": "CEO of Amazon and Blue Origin"
+        },
+        {
+            "name": "Elon Musk",
+            "netWorth": 153.5,
+            "title": "CEO of Tesla, CEO of SpaceX and former CEO of Paypal"
+        },
+        {
+            "name": "Jack Dorsey",
+            "netWorth": 11.9,
+            "title": "CEO of Twitter"
+        },
+        {
+            "name": "Bill Gates",
+            "netWorth": 127.3,
+            "title": "Founder and former CEO of Microsoft"
+        },
+        {
+            "name": "Warren Buffet",
+            "netWorth": 98.5,
+            "title": "CEO of Berkshire Hathaway and top investor"
+        },
+        {
+            "name": "Amancio Ortega",
+            "netWorth": 89.4,
+            "title": "CEO of Zara"
+        },
+        {
+            "name": "Donald Trump",
+            "netWorth": 2.4,
+            "title": "Real Estate Developer and shareholder of Trump Inc"
+        },
+        {
+            "name": "Tim Cook",
+            "netWorth": 1.3,
+            "title": "CEO of Apple"
+        },
+        {
+            "name": "Larry Ellison",
+            "netWorth": 91.1,
+            "title": "former CEO of Oracle"
+        }
+
+    ]
+}
