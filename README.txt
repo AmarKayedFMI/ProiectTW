@@ -1,5 +1,5 @@
 # ProiectTW
-Website pentru proiectul la Tehinici Web. Tema website-ului este educatia financiara. Proiectul a fost realizat folosind HTML5, CSS3, Javascript(ES6).
+Website pentru proiectul la Tehinici Web. Tema website-ului este libertatea financiara. Proiectul a fost realizat folosind HTML5, CSS3, Javascript(ES6).
 
 
 Autor(prenume, nume): Amar Kayed
