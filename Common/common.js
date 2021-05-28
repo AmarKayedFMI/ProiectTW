@@ -11,8 +11,10 @@ localStorage.setItem('9', '9. “I don’t know the word ‘quit.’ Either I ne
 
 
 document.addEventListener('keydown', (event)=>{
-    if(event.key == 'Escape')                      // Event pe baza de tastare de Esc
+    if(event.key == 'Escape'){                     // Event pe baza de tastare de Esc
         alert("You just pressed the Escape key!\nBefore you leave, think about it!");
+        event.stopPropagation();
+    }
     else if(event.key in localStorage)
         alert(localStorage.getItem(event.key));
 });
@@ -40,13 +42,14 @@ const burgerDiv = document.querySelectorAll(".burger div");
 const navList = document.querySelector(".links");
 const navLinks = document.querySelectorAll(".links li");
 
-burger.addEventListener("mouseover",()=>{
+burger.addEventListener("mouseover",(event)=>{
     burgerDiv.forEach((line)=>{
         // line.style.animation = "burgerHover 0.7s ease forwards";
         line.style.width = "45px";
         line.style.height = "4px";
         line.style.boxShadow = "1px 1px 10px white, -1px -1px 10px white";
     });
+    event.stopPropagation();
 });
 
 burger.addEventListener("mouseleave",()=>{
@@ -57,9 +60,9 @@ burger.addEventListener("mouseleave",()=>{
         line.style.boxShadow = "none";
     });
 });
-
+// console.log(window.getComputedStyle(navList).getPropertyValue("transform"));
 burger.addEventListener("click",()=>{
-    if(navList.style.transform == ""){
+    if(window.getComputedStyle(navList).getPropertyValue("transform") && navList.style.transform == ""){
         navList.style.transform = "translateX(0vw)";
     }
     else{
